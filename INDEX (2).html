@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Madre Silvia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f5e6ff 0%, #e8f5e9 100%);
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            animation: cardAppear 1.5s ease-out;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.5) rotateY(180deg);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) rotateY(0deg);
+            }
+        }
+
+        .heart {
+            font-size: 60px;
+            color: #ff6b9d;
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #7b2cbf;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 2s ease-out;
+        }
+
+        .nombre {
+            font-size: 3em;
+            color: #5a189a;
+            font-weight: bold;
+            margin: 15px 0;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px #c77dff, 0 0 20px #e0aaff; }
+            50% { text-shadow: 0 0 20px #c77dff, 0 0 40px #e0aaff, 0 0 60px #c77dff; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mensaje {
+            font-size: 1.3em;
+            color: #2d6a4f;
+            line-height: 1.8;
+            margin: 25px 0;
+            font-style: italic;
+            animation: fadeIn 3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .butterfly {
+            position: absolute;
+            font-size: 30px;
+            animation: fly 8s ease-in-out infinite;
+        }
+
+        .butterfly:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .butterfly:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .butterfly:nth-child(3) {
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .butterfly:nth-child(4) {
+            bottom: 25%;
+            right: 10%;
+            animation-delay: 6s;
+        }
+
+        @keyframes fly {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(50px, -50px) rotate(10deg);
+            }
+            50% {
+                transform: translate(100px, 0) rotate(-10deg);
+            }
+            75% {
+                transform: translate(50px, 50px) rotate(5deg);
+            }
+        }
+
+        .star {
+            position: absolute;
+            color: #ffd60a;
+            font-size: 20px;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .star:nth-child(5) { top: 5%; left: 20%; animation-delay: 0s; }
+        .star:nth-child(6) { top: 15%; right: 25%; animation-delay: 1s; }
+        .star:nth-child(7) { bottom: 10%; left: 25%; animation-delay: 2s; }
+        .star:nth-child(8) { bottom: 20%; right: 20%; animation-delay: 1.5s; }
+        .star:nth-child(9) { top: 40%; left: 5%; animation-delay: 0.5s; }
+        .star:nth-child(10) { top: 50%; right: 8%; animation-delay: 2.5s; }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(1.5) rotate(180deg);
+            }
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: #7b2cbf;
+            font-weight: bold;
+            animation: fadeIn 4s ease-out;
+        }
+
+        .flores {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            animation: grow 2s ease-out;
+        }
+
+        @keyframes grow {
+            from {
+                transform: translateX(-50%) scale(0);
+            }
+            to {
+                transform: translateX(-50%) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+    
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+    <div class="star">⭐</div>
+    <div class="star">✨</div>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>¡Feliz Día de la Madre!</h1>
+        <div class="nombre">Silvia</div>
+        <div class="mensaje">
+            "Eres la luz que ilumina cada día,<br>
+            el abrazo que calma cualquier tempestad,<br>
+            la sonrisa que llena de alegría nuestros corazones.<br>
+            Gracias por ser nuestra guía, nuestro amor,<br>
+            nuestra inspiración infinita."
+        </div>
+        <div class="footer">
+            Con todo nuestro amor y gratitud 💜
+        </div>
+        <div class="flores">🌸🌺🌸</div>
+    </div>
+</body>
+</html>
