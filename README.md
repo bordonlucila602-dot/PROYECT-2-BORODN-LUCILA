@@ -1,2 +1,2 @@
-# PROYECT-2-BORODN-LUCILA
+# PROYECT-2-BORDON-LUCILA
 Conexión sitio web y repositorio
